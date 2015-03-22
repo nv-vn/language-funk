@@ -108,7 +108,7 @@
   'indentifier-type':
     'patterns': [
       {
-        'match': ':\\s*([A-Za-z0-9_\']+)'
+        'match': '.*:\\s*([A-Za-z0-9_\']+).*'
         'name': 'meta.type.identifier-type'
         'captures':
           '1':
@@ -126,7 +126,7 @@
   'type-operators':
     'patterns': [
       {
-        'match': '\\s+(join|union|diff|mask|overlay|select)\\s+'
+        'match': '.*\\s+(join|union|diff|mask|overlay|select|as)\\s+.*'
         'name': 'keyword.operator.type.funk'
         'captures':
           '1':
