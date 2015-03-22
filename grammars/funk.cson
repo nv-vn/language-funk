@@ -36,7 +36,7 @@
           'match': '#\\{\\}#'
       }
       {
-        'match': '#\\{(.|\\s)*\\}#'
+        'match': '#\\{(.|\\s|\\n|\\r)*\\}#'
         'name': 'comment.block.funk'
         'patterns': [
           {
@@ -62,8 +62,8 @@
     ]
   'functions':
     'patterns': [
-      {
         'match': '[A-Za-z0-9_\']+\\s*\\(\\s*([A-Za-z0-9_\']+\\s*:\\s*[A-Za-z0-9_\']+\\s*,\\s*)*[A-Za-z0-9_\']\\s*:\\s*[A-Za-z0-9_\']+?\\s*\\)\\s*->\\s*[A-Za-z0-9_\']+'
+      {
         'name': 'entity.name.function.funk'
       }
     ]
