@@ -20,7 +20,7 @@
     'include': '#functions'
   }
   {
-    'include': 'keywords'
+    'include': '#keywords'
   }
 ]
 'repository':
@@ -46,3 +46,7 @@
     'begin': 'type\\s'
     'end': '='
     'name': 'type.define.funk'
+  'functions':
+    'begin': '[A-Za-z0-9_\']+\\(([A-Za-z0-9_\']+:[A-Za-z0-9_\']+,)*([A-Za-z0-9_\']+)?\\)->[A-Za-z0-9_\']+'
+    'end': '='
+    'name': 'function.define.funk'
