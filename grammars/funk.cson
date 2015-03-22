@@ -51,27 +51,32 @@
   'types':
     'patterns': [
       {
-        'begin': 'type\\s'
-        'end': '='
-        'name': 'type.define.funk'
+        'match': 'type\\s+([A-Za-z0-9_\']+)'
+        'name': 'meta.type.declaration.funk'
+        'captures':
+          '1':
+            'name': 'storage.type.funk'
       }
     ]
   'functions':
     'patterns': [
       {
-        'match': '([A-Za-z0-9_\']+)\\s*\\((\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*([A-Za-z0-9_\']+)\\s*,\\s*)*[A-Za-z0-9_\']\\s*:\\s*[A-Za-z0-9_\']+?\\s*\\))\\s*(->)(\\s*[A-Za-z0-9_\']+)'
+        'match': '([A-Za-z0-9_\']+)\\s*\\((\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*[A-Za-z0-9_\']+\\s*,\\s*)*[A-Za-z0-9_\']\\s*:\\s*[A-Za-z0-9_\']+?\\s*\\))\\s*(->)(\\s*[A-Za-z0-9_\']+)'
         'name': 'meta.function.declaration.funk'
         'captures':
           '1':
             'name': 'entity.name.function.funk'
-
           '2':
+            'match': '\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*([A-Za-z0-9_\']+)\\s*,\\s*)*[A-Za-z0-9_\']\\s*:\\s*([A-Za-z0-9_\']+)?\\s*'
             'name': 'variable.parameter.funk'
+            'captures':
+              '1':
+                'name': 'storage.type.funk'
+              '2':
+                'name': 'storage.type.funk'
           '3':
-            'name': 'storage.type.funk'
-          '4':
             'name': 'entity.name.function.funk'
-          '5':
+          '4':
             'name': 'storage.type.funk'
       }
     ]
