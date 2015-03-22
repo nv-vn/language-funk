@@ -22,6 +22,9 @@
   {
     'include': '#keywords'
   }
+  {
+    'include': '#identifier'
+  }
 ]
 'repository':
   'comments':
@@ -39,14 +42,33 @@
     ]
   'line-comments':
     'patterns': [
-      'match': '#.*$'
-      'name': 'comment.line.octothorpe.funk'
+      {
+        'match': '#.*$'
+        'name': 'comment.line.octothorpe.funk'
+      }
     ]
   'types':
-    'begin': 'type\\s'
-    'end': '='
-    'name': 'type.define.funk'
+    'patterns': [
+      {
+        'begin': 'type\\s'
+        'end': '='
+        'name': 'type.define.funk'
+      }
+    ]
   'functions':
-    'begin': '[A-Za-z0-9_\']+\\(([A-Za-z0-9_\']+:[A-Za-z0-9_\']+,)*([A-Za-z0-9_\']+)?\\)->[A-Za-z0-9_\']+'
-    'end': '='
-    'name': 'function.define.funk'
+    'patterns': [
+      {
+        'begin': '[A-Za-z0-9_\']+\\s\\(\\s([A-Za-z0-9_\']+\\s:\\s[A-Za-z0-9_\']+,\\s)*([A-Za-z0-9_\']+\\s:\\s[A-Za-z0-9_\']+)?\\s\\)\\s->\\s[A-Za-z0-9_\']+'
+        'end': '='
+        'name': 'function.define.funk'
+      }
+    ]
+  'identifier':
+    'patterns': [
+      {
+        'match': '[A-Za-z0-9_\']+'
+        'name': 'identifier.funk'
+      }
+    ]
+
+'scopeName': 'source.funk'
