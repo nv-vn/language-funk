@@ -1,4 +1,0 @@
-'.source.funk':
-  'editor':
-    'increaseIndent': '='
-    'decreaseIndent': '(?:\\D+\\s*\\.|\\d+\\s*\\.(?:\\D|\\s|$))'
