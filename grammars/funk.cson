@@ -122,6 +122,7 @@
         'end': '(?:\\D+\\s*\\.|\\d+\\s*\\.(?:\\D|\\s|$))'
         'name': 'meta.definition.block.funk'
       }
+    ]
   'type-operators':
     'patterns': [
       {
@@ -160,5 +161,4 @@
         ]
       }
     ]
-
 'scopeName': 'source.funk'
