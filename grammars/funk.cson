@@ -1,0 +1,48 @@
+'fileTypes': [
+  'fnk'
+  'fun'
+  'funk'
+]
+'foldingStartMarker': ''
+'foldingStopMarker': ''
+'name': 'Funk'
+'patterns': [
+  {
+    'include': '#comments'
+  }
+  {
+    'include': '#line-comments'
+  }
+  {
+    'include': '#types'
+  }
+  {
+    'include': '#functions'
+  }
+  {
+    'include': 'keywords'
+  }
+]
+'repository':
+  'comments':
+    'patterns': [
+      {
+        'begin': '#\\{'
+        'end': '#\\}'
+        'name': 'comment.block.funk'
+        'patterns': [
+          {
+            'include': '#comments'
+          }
+        ]
+      }
+    ]
+  'line-comments':
+    'patterns': [
+      'match': '#.*$'
+      'name': 'comment.line.octothorpe.funk'
+    ]
+  'types':
+    'begin': 'type\\s'
+    'end': '='
+    'name': 'type.define.funk'
