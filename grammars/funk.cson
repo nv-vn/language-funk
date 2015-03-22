@@ -22,6 +22,18 @@
   {
     'include': '#definitions'
   }
+  {
+    'include': '#indentifier-type'
+  }
+  {
+    'include': '#definition-block'
+  }
+  {
+    'include': '#type-operators'
+  }
+  {
+    'include': '#string-literal'
+  }
 ]
 'repository':
   'comments':
@@ -91,6 +103,61 @@
             'name': 'variable.other.funk'
           '3':
             'name': 'storage.type.funk'
+      }
+    ]
+  'indentifier-type':
+    'patterns': [
+      {
+        'match': ':\\s*([A-Za-z0-9_\']+)'
+        'name': 'meta.type.identifier-type'
+        'captures':
+          '1':
+            'name': 'storage.type.funk'
+      }
+    ]
+  'definition-block':
+    'patterns': [
+      {
+        'begin': '='
+        'end': '(?:\\D+\\s*\\.|\\d+\\s*\\.(?:\\D|\\s|$))'
+        'name': 'meta.definition.block.funk'
+      }
+  'type-operators':
+    'patterns': [
+      {
+        'match': '\\s+(join|union|diff|mask|overlay|select)\\s+'
+        'name': 'keyword.operator.type.funk'
+        'captures':
+          '1':
+            'keyword.operator.type.funk'
+      }
+    ]
+  'string-literal':
+    'patterns': [
+      {
+        'begin': '(?=[^\\\\])(")'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.definition.string.begin.funk'
+        'end': '(")'
+        'endCaptures':
+          '1':
+            'name': 'punctuation.defintions.string.end.funk'
+        'name': 'string.quoted.double.funk'
+        'patterns': [
+          {
+            'match': '\\\\$[ \\t]*'
+            'name': 'punctuation.separator.string.ingore-eol.funk'
+          }
+          {
+            'match': '\\\\([\\\\\'ntbr]|u[a-fA-F0-9]{4}|u[a-fA-F0-9]{8}|a[a-fA-F0-9]{2})'
+            'name': 'constant.character.string.escape.funk'
+          }
+          {
+            'match': '\\\\(?![\\\\\'ntbr]|u[a-fA-F0-9]{4}|u[a-fA-F0-9]{8}|a[a-fA-F0-9]{2}).'
+            'name': 'invalid.illeagal.character.string.funk'
+          }
+        ]
       }
     ]
 
