@@ -20,10 +20,7 @@
     'include': '#functions'
   }
   {
-    'include': '#keywords'
-  }
-  {
-    'include': '#identifier'
+    'include': '#definitions'
   }
 ]
 'repository':
@@ -51,27 +48,29 @@
   'types':
     'patterns': [
       {
-        'match': 'type\\s+([A-Za-z0-9_\']+)'
+        'match': '(type)\\s+([A-Za-z0-9_\']+)'
         'name': 'meta.type.declaration.funk'
         'captures':
           '1':
+            'name': 'keyword.other.funk'
+          '2':
             'name': 'storage.type.funk'
       }
     ]
   'functions':
     'patterns': [
       {
-        'match': '([A-Za-z0-9_\']+)\\s*\\((\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*[A-Za-z0-9_\']+\\s*,\\s*)*[A-Za-z0-9_\']\\s*:\\s*[A-Za-z0-9_\']+?\\s*\\))\\s*(->)(\\s*[A-Za-z0-9_\']+)'
+        'match': '([A-Za-z0-9_\']+)\\s*\\((\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*[A-Za-z0-9_\']+\\s*,\\s*)*(?:[A-Za-z0-9_\']\\s*:\\s*[A-Za-z0-9_\']+)?\\s*\\))\\s*(->)(\\s*[A-Za-z0-9_\']+)'
         'name': 'meta.function.declaration.funk'
         'captures':
           '1':
             'name': 'entity.name.function.funk'
           '2':
-            'match': '\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*([A-Za-z0-9_\']+)\\s*,\\s*)*[A-Za-z0-9_\']\\s*:\\s*([A-Za-z0-9_\']+)?\\s*'
+            'match': '([A-Za-z0-9_\']+)\\s*:\\s*([A-Za-z0-9_\']+)'
             'name': 'variable.parameter.funk'
             'captures':
               '1':
-                'name': 'storage.type.funk'
+                'name': 'variable.parameter.funk'
               '2':
                 'name': 'storage.type.funk'
           '3':
@@ -80,11 +79,18 @@
             'name': 'storage.type.funk'
       }
     ]
-  'identifier':
+  'defintions':
     'patterns': [
       {
-        'match': '[A-Za-z0-9_\']+'
-        'name': 'identifier.funk'
+        'match': '(let|var|val|set)\\s+([A-Za-z0-9_\']+)\\s*:\\s*([A-Za-z0-9_\']+)'
+        'name': 'meta.variable.definition.funk'
+        'captures':
+          '1':
+            'name': 'keyword.other.funk'
+          '2':
+            'name': 'variable.other.funk'
+          '3':
+            'name': 'storage.type.funk'
       }
     ]
 
