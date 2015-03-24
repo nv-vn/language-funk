@@ -127,7 +127,7 @@
     'patterns': [
       {
         'match': '.*\\s+(join|union|diff|mask|overlay|select|as)\\s+.*'
-        'name': 'keyword.operator.type.funk'
+        'name': 'meta.operation.type.funk'
         'captures':
           '1':
             'keyword.operator.type.funk'

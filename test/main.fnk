@@ -1,0 +1,41 @@
+type testA =
+  (
+    a : int,
+    b : int
+  ).
+
+type testB =
+  (
+    x : real,
+    y : real,
+    z : real
+  ).
+
+type test =
+  a join b.
+
+f (s:int) -> test =
+  g (x:int) -> int =
+    h (y:int) -> int =
+      x + y..
+  let resA : testA = (1, 2).
+  let resB : testB = (1.0, 2.0, 3.0).
+  resA join resB as test.
+
+main () -> int =
+  f (2)
+  0.
+
+#{
+    identifier + tuple = function call?
+    identifier + [...] = function binding
+    (...) = tuple
+    = . = block
+    keywords:
+        join
+        union
+        diff
+        mask
+        overlay
+        select
+}#
