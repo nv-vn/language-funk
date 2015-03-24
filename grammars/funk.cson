@@ -74,6 +74,7 @@
         ]
       }
     ]
+  }
   'line-comments': {
     'patterns': [
       {
@@ -129,7 +130,7 @@
           {
             'include': '#functions'
           }
-
+          {
             'include': '#definitions'
           }
           {
