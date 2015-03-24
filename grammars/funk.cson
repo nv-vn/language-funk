@@ -35,8 +35,8 @@
     'include': '#string-literal'
   }
 ]
-'repository':
-  'comments':
+'repository': {
+  'comments': {
     'patterns': [
       {
         'applyEndPatternLast': 1
@@ -45,223 +45,239 @@
         'name': 'comment.block.funk'
         'patterns': [
           {
-            {
-              'include': '#comments'
-            }
-            {
-              'include': '#line-comments'
-            }
-            {
-              'include': '#types'
-            }
-            {
-              'include': '#functions'
-            }
-            {
-              'include': '#definitions'
-            }
-            {
-              'include': '#indentifier-type'
-            }
-            {
-              'include': '#definition-block'
-            }
-            {
-              'include': '#type-operators'
-            }
-            {
-              'include': '#string-literal'
-            }
+            'include': '#comments'
+          }
+          {
+            'include': '#line-comments'
+          }
+          {
+            'include': '#types'
+          }
+          {
+            'include': '#functions'
+          }
+          {
+            'include': '#definitions'
+          }
+          {
+            'include': '#indentifier-type'
+          }
+          {
+            'include': '#definition-block'
+          }
+          {
+            'include': '#type-operators'
+          }
+          {
+            'include': '#string-literal'
           }
         ]
       }
     ]
-  'line-comments':
+  'line-comments': {
     'patterns': [
       {
         'match': '#.*$'
         'name': 'comment.line.octothorpe.funk'
         'patterns': [
           {
-            {
-              'include': '#comments'
-            }
-            {
-              'include': '#line-comments'
-            }
-            {
-              'include': '#types'
-            }
-            {
-              'include': '#functions'
-            }
-            {
-              'include': '#definitions'
-            }
-            {
-              'include': '#indentifier-type'
-            }
-            {
-              'include': '#definition-block'
-            }
-            {
-              'include': '#type-operators'
-            }
-            {
-              'include': '#string-literal'
-            }
+            'include': '#comments'
           }
+          {
+            'include': '#line-comments'
+          }
+          {
+            'include': '#types'
+          }
+          {
+            'include': '#functions'
+          }
+          {
+            'include': '#definitions'
+          }
+          {
+            'include': '#indentifier-type'
+          }
+          {
+            'include': '#definition-block'
+          }
+          {
+            'include': '#type-operators'
+          }
+          {
+            'include': '#string-literal'
+          }
+        ]
       }
     ]
-  'types':
+  }
+  'types': {
     'patterns': [
       {
         'match': '(type)\\s+([A-Za-z0-9_\']+)'
         'name': 'meta.type.declaration.funk'
         'patterns': [
           {
-            {
-              'include': '#comments'
-            }
-            {
-              'include': '#line-comments'
-            }
-            {
-              'include': '#types'
-            }
-            {
-              'include': '#functions'
-            }
-            {
-              'include': '#definitions'
-            }
-            {
-              'include': '#indentifier-type'
-            }
-            {
-              'include': '#definition-block'
-            }
-            {
-              'include': '#type-operators'
-            }
-            {
-              'include': '#string-literal'
-            }
+            'include': '#comments'
           }
-        'captures':
-          '1':
+          {
+            'include': '#line-comments'
+          }
+          {
+            'include': '#types'
+          }
+          {
+            'include': '#functions'
+          }
+
+            'include': '#definitions'
+          }
+          {
+            'include': '#indentifier-type'
+          }
+          {
+            'include': '#definition-block'
+          }
+          {
+            'include': '#type-operators'
+          }
+          {
+            'include': '#string-literal'
+          }
+        ]
+        'captures': {
+          '1': {
             'name': 'keyword.other.funk'
-          '2':
+          }
+          '2': {
             'name': 'storage.type.funk'
+          }
+        }
       }
     ]
-  'functions':
+  }
+  'functions': {
     'patterns': [
       {
         'match': '([A-Za-z0-9_\']+)\\s*\\((\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*[A-Za-z0-9_\']+\\s*,\\s*)*(?:[A-Za-z0-9_\']\\s*:\\s*[A-Za-z0-9_\']+)?\\s*\\))\\s*(->)(\\s*[A-Za-z0-9_\']+)'
         'name': 'meta.function.declaration.funk'
         'patterns': [
           {
-            {
-              'include': '#comments'
-            }
-            {
-              'include': '#line-comments'
-            }
-            {
-              'include': '#types'
-            }
-            {
-              'include': '#functions'
-            }
-            {
-              'include': '#definitions'
-            }
-            {
-              'include': '#indentifier-type'
-            }
-            {
-              'include': '#definition-block'
-            }
-            {
-              'include': '#type-operators'
-            }
-            {
-              'include': '#string-literal'
-            }
+            'include': '#comments'
           }
-        'captures':
-          '1':
+          {
+            'include': '#line-comments'
+          }
+          {
+            'include': '#types'
+          }
+          {
+            'include': '#functions'
+          }
+          {
+            'include': '#definitions'
+          }
+          {
+            'include': '#indentifier-type'
+          }
+          {
+            'include': '#definition-block'
+          }
+          {
+            'include': '#type-operators'
+          }
+          {
+            'include': '#string-literal'
+          }
+        ]
+        'captures': {
+          '1': {
             'name': 'entity.name.function.funk'
-          '2':
+          }
+          '2': {
             'match': '([A-Za-z0-9_\']+)\\s*:\\s*([A-Za-z0-9_\']+)'
             'name': 'variable.parameter.funk'
-            'captures':
-              '1':
+            'captures': {
+              '1': {
                 'name': 'variable.parameter.funk'
-              '2':
+              }
+              '2': {
                 'name': 'storage.type.funk'
-          '3':
+              }
+            }
+          }
+          '3': {
             'name': 'entity.name.function.funk'
-          '4':
+          }
+          '4': {
             'name': 'storage.type.funk'
+          }
+        }
       }
     ]
-  'defintions':
+  }
+  'defintions': {
     'patterns': [
       {
         'match': '(let|var|val|set)\\s+([A-Za-z0-9_\']+)\\s*:\\s*([A-Za-z0-9_\']+)'
         'name': 'meta.variable.definition.funk'
         'patterns': [
           {
-            {
-              'include': '#comments'
-            }
-            {
-              'include': '#line-comments'
-            }
-            {
-              'include': '#types'
-            }
-            {
-              'include': '#functions'
-            }
-            {
-              'include': '#definitions'
-            }
-            {
-              'include': '#indentifier-type'
-            }
-            {
-              'include': '#definition-block'
-            }
-            {
-              'include': '#type-operators'
-            }
-            {
-              'include': '#string-literal'
-            }
+            'include': '#comments'
           }
-        'captures':
-          '1':
+          {
+            'include': '#line-comments'
+          }
+          {
+            'include': '#types'
+          }
+          {
+            'include': '#functions'
+          }
+          {
+            'include': '#definitions'
+          }
+          {
+            'include': '#indentifier-type'
+          }
+          {
+            'include': '#definition-block'
+          }
+          {
+            'include': '#type-operators'
+          }
+          {
+            'include': '#string-literal'
+          }
+        ]
+        'captures': {
+          '1': {
             'name': 'keyword.other.funk'
-          '2':
+          }
+          '2': {
             'name': 'variable.other.funk'
-          '3':
+          }
+          '3': {
             'name': 'storage.type.funk'
+          }
+        }
       }
     ]
-  'indentifier-type':
+  }
+  'indentifier-type': {
     'patterns': [
       {
         'match': '.*:\\s*([A-Za-z0-9_\']+).*'
         'name': 'meta.type.identifier-type'
-        'captures':
-          '1':
+        'captures': {
+          '1': {
             'name': 'storage.type.funk'
+          }
+        }
       }
     ]
-  'definition-block':
+  }
+  'definition-block': {
     'patterns': [
       {
         'begin': '='
@@ -269,87 +285,93 @@
         'name': 'meta.definition.block.funk'
         'patterns': [
           {
-            {
-              'include': '#comments'
-            }
-            {
-              'include': '#line-comments'
-            }
-            {
-              'include': '#types'
-            }
-            {
-              'include': '#functions'
-            }
-            {
-              'include': '#definitions'
-            }
-            {
-              'include': '#indentifier-type'
-            }
-            {
-              'include': '#definition-block'
-            }
-            {
-              'include': '#type-operators'
-            }
-            {
-              'include': '#string-literal'
-            }
+            'include': '#comments'
           }
+          {
+            'include': '#line-comments'
+          }
+          {
+            'include': '#types'
+          }
+          {
+            'include': '#functions'
+          }
+          {
+            'include': '#definitions'
+          }
+          {
+            'include': '#indentifier-type'
+          }
+          {
+            'include': '#definition-block'
+          }
+          {
+            'include': '#type-operators'
+          }
+          {
+            'include': '#string-literal'
+          }
+        ]
       }
     ]
-  'type-operators':
+  }
+  'type-operators': {
     'patterns': [
       {
         'match': '.*\\s+(join|union|diff|mask|overlay|select|as)\\s+.*'
         'name': 'meta.operation.type.funk'
         'patterns': [
           {
-            {
-              'include': '#comments'
-            }
-            {
-              'include': '#line-comments'
-            }
-            {
-              'include': '#types'
-            }
-            {
-              'include': '#functions'
-            }
-            {
-              'include': '#definitions'
-            }
-            {
-              'include': '#indentifier-type'
-            }
-            {
-              'include': '#definition-block'
-            }
-            {
-              'include': '#type-operators'
-            }
-            {
-              'include': '#string-literal'
-            }
+            'include': '#comments'
           }
-        'captures':
-          '1':
+          {
+            'include': '#line-comments'
+          }
+          {
+            'include': '#types'
+          }
+          {
+            'include': '#functions'
+          }
+          {
+            'include': '#definitions'
+          }
+          {
+            'include': '#indentifier-type'
+          }
+          {
+            'include': '#definition-block'
+          }
+          {
+            'include': '#type-operators'
+          }
+          {
+            'include': '#string-literal'
+          }
+        ]
+        'captures': {
+          '1': {
             'keyword.operator.type.funk'
+          }
+        }
       }
     ]
-  'string-literal':
+  }
+  'string-literal': {
     'patterns': [
       {
         'begin': '(?=[^\\\\])(")'
-        'beginCaptures':
-          '1':
+        'beginCaptures': {
+          '1': {
             'name': 'punctuation.definition.string.begin.funk'
+          }
+        }
         'end': '(")'
-        'endCaptures':
-          '1':
+        'endCaptures': {
+          '1': {
             'name': 'punctuation.defintions.string.end.funk'
+          }
+        }
         'name': 'string.quoted.double.funk'
         'patterns': [
           {
@@ -367,4 +389,6 @@
         ]
       }
     ]
+  }
+}
 'scopeName': 'source.funk'
