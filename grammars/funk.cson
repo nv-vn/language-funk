@@ -45,7 +45,33 @@
         'name': 'comment.block.funk'
         'patterns': [
           {
-            'include': '#comments'
+            {
+              'include': '#comments'
+            }
+            {
+              'include': '#line-comments'
+            }
+            {
+              'include': '#types'
+            }
+            {
+              'include': '#functions'
+            }
+            {
+              'include': '#definitions'
+            }
+            {
+              'include': '#indentifier-type'
+            }
+            {
+              'include': '#definition-block'
+            }
+            {
+              'include': '#type-operators'
+            }
+            {
+              'include': '#string-literal'
+            }
           }
         ]
       }
@@ -55,6 +81,36 @@
       {
         'match': '#.*$'
         'name': 'comment.line.octothorpe.funk'
+        'patterns': [
+          {
+            {
+              'include': '#comments'
+            }
+            {
+              'include': '#line-comments'
+            }
+            {
+              'include': '#types'
+            }
+            {
+              'include': '#functions'
+            }
+            {
+              'include': '#definitions'
+            }
+            {
+              'include': '#indentifier-type'
+            }
+            {
+              'include': '#definition-block'
+            }
+            {
+              'include': '#type-operators'
+            }
+            {
+              'include': '#string-literal'
+            }
+          }
       }
     ]
   'types':
@@ -62,6 +118,36 @@
       {
         'match': '(type)\\s+([A-Za-z0-9_\']+)'
         'name': 'meta.type.declaration.funk'
+        'patterns': [
+          {
+            {
+              'include': '#comments'
+            }
+            {
+              'include': '#line-comments'
+            }
+            {
+              'include': '#types'
+            }
+            {
+              'include': '#functions'
+            }
+            {
+              'include': '#definitions'
+            }
+            {
+              'include': '#indentifier-type'
+            }
+            {
+              'include': '#definition-block'
+            }
+            {
+              'include': '#type-operators'
+            }
+            {
+              'include': '#string-literal'
+            }
+          }
         'captures':
           '1':
             'name': 'keyword.other.funk'
@@ -74,6 +160,36 @@
       {
         'match': '([A-Za-z0-9_\']+)\\s*\\((\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*[A-Za-z0-9_\']+\\s*,\\s*)*(?:[A-Za-z0-9_\']\\s*:\\s*[A-Za-z0-9_\']+)?\\s*\\))\\s*(->)(\\s*[A-Za-z0-9_\']+)'
         'name': 'meta.function.declaration.funk'
+        'patterns': [
+          {
+            {
+              'include': '#comments'
+            }
+            {
+              'include': '#line-comments'
+            }
+            {
+              'include': '#types'
+            }
+            {
+              'include': '#functions'
+            }
+            {
+              'include': '#definitions'
+            }
+            {
+              'include': '#indentifier-type'
+            }
+            {
+              'include': '#definition-block'
+            }
+            {
+              'include': '#type-operators'
+            }
+            {
+              'include': '#string-literal'
+            }
+          }
         'captures':
           '1':
             'name': 'entity.name.function.funk'
@@ -96,6 +212,36 @@
       {
         'match': '(let|var|val|set)\\s+([A-Za-z0-9_\']+)\\s*:\\s*([A-Za-z0-9_\']+)'
         'name': 'meta.variable.definition.funk'
+        'patterns': [
+          {
+            {
+              'include': '#comments'
+            }
+            {
+              'include': '#line-comments'
+            }
+            {
+              'include': '#types'
+            }
+            {
+              'include': '#functions'
+            }
+            {
+              'include': '#definitions'
+            }
+            {
+              'include': '#indentifier-type'
+            }
+            {
+              'include': '#definition-block'
+            }
+            {
+              'include': '#type-operators'
+            }
+            {
+              'include': '#string-literal'
+            }
+          }
         'captures':
           '1':
             'name': 'keyword.other.funk'
@@ -121,6 +267,36 @@
         'begin': '='
         'end': '(?:\\D+\\s*\\.|\\d+\\s*\\.(?:\\D|\\s|$))'
         'name': 'meta.definition.block.funk'
+        'patterns': [
+          {
+            {
+              'include': '#comments'
+            }
+            {
+              'include': '#line-comments'
+            }
+            {
+              'include': '#types'
+            }
+            {
+              'include': '#functions'
+            }
+            {
+              'include': '#definitions'
+            }
+            {
+              'include': '#indentifier-type'
+            }
+            {
+              'include': '#definition-block'
+            }
+            {
+              'include': '#type-operators'
+            }
+            {
+              'include': '#string-literal'
+            }
+          }
       }
     ]
   'type-operators':
@@ -128,6 +304,36 @@
       {
         'match': '.*\\s+(join|union|diff|mask|overlay|select|as)\\s+.*'
         'name': 'meta.operation.type.funk'
+        'patterns': [
+          {
+            {
+              'include': '#comments'
+            }
+            {
+              'include': '#line-comments'
+            }
+            {
+              'include': '#types'
+            }
+            {
+              'include': '#functions'
+            }
+            {
+              'include': '#definitions'
+            }
+            {
+              'include': '#indentifier-type'
+            }
+            {
+              'include': '#definition-block'
+            }
+            {
+              'include': '#type-operators'
+            }
+            {
+              'include': '#string-literal'
+            }
+          }
         'captures':
           '1':
             'keyword.operator.type.funk'
