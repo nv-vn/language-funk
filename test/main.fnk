@@ -8,9 +8,13 @@ type testB =
   (
     x : real,
     y : real,
-    z : real
+    z : real,
+    w : (type vector =
+          (
+            vals : float[3]
+          ).
+        )
   ).
-
 type test =
   a join b.
 
@@ -18,6 +22,10 @@ f (s:int) -> test =
   g (x:int) -> int =
     h (y:int) -> int =
       x + y..
+  type s =
+    (
+      a : int
+    ).
   let resA : testA = (1, 2).
   let resB : testB = (1.0, 2.0, 3.0).
   resA join resB as test.

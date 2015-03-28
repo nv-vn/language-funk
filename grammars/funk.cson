@@ -160,6 +160,7 @@
   'functions': {
     'patterns': [
       {
+
         'match': '([A-Za-z0-9_\']+)\\s*\\((\\s*(?:[A-Za-z0-9_\']+\\s*:\\s*[A-Za-z0-9_\']+\\s*,\\s*)*(?:[A-Za-z0-9_\']\\s*:\\s*[A-Za-z0-9_\']+)?\\s*\\))\\s*(->)(\\s*[A-Za-z0-9_\']+)'
         'name': 'meta.function.declaration.funk'
         'patterns': [
@@ -385,7 +386,7 @@
           }
           {
             'match': '\\\\(?![\\\\\'ntbr]|u[a-fA-F0-9]{4}|u[a-fA-F0-9]{8}|a[a-fA-F0-9]{2}).'
-            'name': 'invalid.illeagal.character.string.funk'
+            'name': 'invalid.illegal.character.string.funk'
           }
         ]
       }
