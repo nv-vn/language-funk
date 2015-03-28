@@ -273,6 +273,9 @@
         'name': 'meta.type.identifier-type'
         'captures': {
           '1': {
+            'name': 'variable.other.funk'
+          }
+          '2': {
             'name': 'storage.type.funk'
           }
         }
