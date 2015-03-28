@@ -1,6 +1,6 @@
 {
   "name": "language-funk",
-  "version": "0.7.13",
+  "version": "0.7.14",
   "description": "Funk language support for Atom",
   "repository": "https://github.com/nv-vn/language-funk",
   "keywords": [
